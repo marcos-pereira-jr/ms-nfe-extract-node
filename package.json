@@ -1,0 +1,22 @@
+{
+  "name": "ms-nfe-extract-node",
+  "version": "0.0.1",
+  "description": "Worker NFE extract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcos-pereira-jr/ms-nfe-extract-node.git"
+  },
+  "keywords": [
+    "nfe"
+  ],
+  "author": "marcos.ant.pereira.jr@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node/issues"
+  },
+  "homepage": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node#readme"
+}
