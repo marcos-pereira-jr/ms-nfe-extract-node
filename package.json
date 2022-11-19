@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node/issues"
   },
-  "homepage": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node#readme"
+  "homepage": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node#readme",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
 }
