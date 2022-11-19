@@ -2,6 +2,7 @@
   "name": "ms-nfe-extract-node",
   "version": "0.0.1",
   "description": "Worker NFE extract",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
