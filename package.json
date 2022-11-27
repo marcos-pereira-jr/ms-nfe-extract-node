@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/marcos-pereira-jr/ms-nfe-extract-node#readme",
   "dependencies": {
-    "amqplib": "^0.10.3"
+    "amqplib": "^0.10.3",
+    "jsdom": "^20.0.3",
+    "moment": "^2.29.4"
   }
 }

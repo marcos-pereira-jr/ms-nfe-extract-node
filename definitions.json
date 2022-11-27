@@ -15,7 +15,7 @@
     ],
     "exchanges": [
         {
-            "name": "number",
+            "name": "brute_nfe",
             "vhost": "/",
             "type": "fanout",
             "durable": true,
@@ -47,7 +47,7 @@
     ],
     "queues": [
         {
-            "name": "number",
+            "name": "brute_nfe",
             "vhost": "/",
             "durable": true,
             "auto_delete": false,
@@ -56,9 +56,9 @@
     ],
     "bindings": [
         {
-            "source": "number",
+            "source": "brute_nfe",
             "vhost": "/",
-            "destination": "number",
+            "destination": "brute_nfe",
             "destination_type": "queue",
             "routing_key": "*",
             "arguments": {}
