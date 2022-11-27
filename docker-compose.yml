@@ -1,14 +1,34 @@
 version: "3.2"
 services:
   rabbitmq:
-    image: rabbitmq:3-management-alpine
+    image: rabbitmq:3.8-management-alpine
     container_name: 'rabbitmq'
     ports:
-      - 5672:5672
-      - 15672:15672
+      - 5673:5672
+      - 15673:15672
     networks:
       - rabbitmq_go_net
-
+    volumes:
+      - type: bind
+        source: ./rabbitmq-enabled-plugins
+        target: /etc/rabbitmq/enabled_plugins
+      - type: bind
+        source: ./rabbitmq.config
+        target: /etc/rabbitmq/rabbitmq.conf
+      - type: bind
+        source: ./definitions.json
+        target: /etc/rabbitmq/definitions.json
+  worker:
+    build:
+      context: ./
+    networks:
+      - rabbitmq_go_net
+    depends_on:
+      - rabbitmq
+    links:
+      - rabbitmq
+    environment:
+      - RABBITMQ= amqp://adminuser:guest@rabbitmq:5672
+      - RETRY=1000
 networks:
   rabbitmq_go_net:
-    driver: bridge
